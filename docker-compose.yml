@@ -1,0 +1,14 @@
+version: '3.4'
+
+services:
+  service:
+    build: .
+    container_name: nodemon-restart-issue
+    working_dir: /home/node/app
+    environment:
+      - DEBUG=nodemon*
+    volumes:
+      - ./src:/home/node/app/src
+    ports:
+      - 9222:9222
+    command: "nodemon --inspect=0.0.0.0:9222 src/index.js"

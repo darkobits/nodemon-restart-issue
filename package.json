@@ -1,0 +1,12 @@
+{
+  "name": "nodemon-restart-issue",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "DEBUG=nodemon* nodemon --inspect=0.0.0.0:9229 src/index.js",
+    "start:docker": "docker-compose up --build"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.7"
+  }
+}
